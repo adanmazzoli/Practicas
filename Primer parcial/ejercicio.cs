@@ -7,6 +7,7 @@ namespace Primer_parcial
         static void Main(string[] args)
         {
            int limiteRetiro = 20000, limiteTransaccion = 10000;
+           int B1000, B500, B200, B100;
 
              Console.Write("Bienvenido al Cajero FDP Inversments. ");
              Console.WriteLine("Seleccione Entidad");
@@ -41,35 +42,42 @@ namespace Primer_parcial
                               int Billetes = Convert.ToInt32(Console.ReadLine());
                                if (Billetes == 1)
                                {
-                                 int formadeRetiro = cantidadRetirar / 1000;
-                                  Console.WriteLine($"El monto es un total de {formadeRetiro} Billetes de 1,000");
-                                  Console.WriteLine("Gracias por utilizar el Cajero FDP Inversments");
-                                 break;
-                               }
-
-                               else if (Billetes == 2)
-                               {
-                                   int formadeRetiroDos = cantidadRetirar / 500;
-                                   Console.WriteLine($"El monto es un total de {formadeRetiroDos} Billetes de 500");
-                                   Console.WriteLine("Gracias por utilizar el Cajero FDP Inversments");
-                                   break;
-                               }
-
-                               else if (Billetes == 3)
-                               {
-                                   int formadeRetiroTres = cantidadRetirar / 200;
-                                   Console.WriteLine($"El monto es un total de {formadeRetiroTres} Billetes de 200");
-                                   Console.WriteLine("Gracias por utilizar el Cajero FDP Inversments");
-                                   break;
-                               }
-
-                               else if (Billetes == 4)
-                               {
-                                  int formadeRetiroCuatro = cantidadRetirar / 100;
-                                  Console.WriteLine($"El monto es un total de {formadeRetiroCuatro} Billetes de 100");
-                                  Console.WriteLine("Gracias por utilizar el Cajero FDP Inversments");
-                                  break; 
-                               }
+                                  if( (cantidadRetirar >= 1000) )
+		                        {
+                               B1000 = ((int) cantidadRetirar / 1000);
+				                       cantidadRetirar = cantidadRetirar - (B1000 * 1000);
+                               Console.WriteLine($"Billetes de 1000: {B1000}");
+                               
+                               	if( (cantidadRetirar >= 500) )
+		                           {
+                                  B500 = ((int) cantidadRetirar / 500);
+				                          cantidadRetirar = cantidadRetirar - (B500 * 500);
+                                  Console.WriteLine($"Billetes de 500: {B500}");
+                                  
+                                  	if( (cantidadRetirar >= 200) )
+		                                 {
+                                        B200 = ((int) cantidadRetirar / 200);
+				                                cantidadRetirar = cantidadRetirar - (B200 * 200);
+                                        Console.WriteLine($"Billetes de 200: {B200}");
+                                         
+                                          if( (cantidadRetirar >= 200) )
+		                                      {
+                                             B200 = ((int) cantidadRetirar / 200);
+				                                     cantidadRetirar = cantidadRetirar - (B200 * 200);
+                                             Console.WriteLine($"Billetes de 200: {B200}");
+                               
+                                              if( (cantidadRetirar >= 100) )
+		                                           {
+                                                  B100 = ((int) cantidadRetirar / 100);
+				                                          cantidadRetirar = cantidadRetirar - (B100 * 100);
+                                                  Console.WriteLine($"Billetes de 100: {B100}");
+                              
+			                                          }
+			                                    }
+			                                }
+			                          }
+			                      }
+                               }   
 
                                else
                                {
