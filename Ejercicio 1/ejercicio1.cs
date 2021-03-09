@@ -37,10 +37,10 @@ namespace Namespace {
             }
             
             public virtual object operar() {
-                this.cliente1.depositar(100);
-                this.cliente2.depositar(150);
-                this.cliente3.depositar(200);
-                this.cliente3.extraer(150);
+                this.cliente1.depositar(500);
+                this.cliente2.depositar(600);
+                this.cliente3.depositar(700);
+                this.cliente3.extraer(250);
             }
             
             public virtual object depositos_totales() {
